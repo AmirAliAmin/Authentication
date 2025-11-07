@@ -41,14 +41,14 @@ export default function Home() {
   },[])
   return (
     <div className='bg-black h-screen flex items-center text-white justify-center flex-col '>
-      <h1 className='text-5xl font-extrabold uppercase'>{loggedUser}</h1>
+      <h1 className='text-5xl font-extrabold uppercase text-center'>{loggedUser}</h1>
       <button className='mt-6 rounded-lg font-medium py-2 px-7 bg-purple-600 cursor-pointer hover:scale-110 transition-all duration-500' onClick={handleLogOut}>LogOut</button>
 
       <div className='flex gap-5 mt-6'>
         {products.map((items,index)=>(
-          <div className='w-20 h-20 bg-purple-600 p-5' key={index}>
-            <h1>{items.name}</h1>
-            <p>{items.price}</p>
+          <div className='w-20 h-20 bg-purple-600 p-5 rounded-lg' key={index}>
+            <h1 className='font-bold text-black'>{items.name}</h1>
+            <p className='font-light text-xs'>{items.price}</p>
           </div>
         ))}
       </div>
