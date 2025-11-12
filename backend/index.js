@@ -22,7 +22,7 @@ app.get('/test', (req, res) => {
 app.use("/auth", userRouter);
 app.use("/products", productRouter);
 
-
+// Start server only after DB connection
 const startServer = async () => {
     const dbConnected = await db();
     if (dbConnected) {

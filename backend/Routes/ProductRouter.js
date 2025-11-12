@@ -17,6 +17,4 @@ productRouter.get('/',ensureAuthentication,(req,res)=>{
     ])
 });
 
-
-
 export default productRouter;
